@@ -56,11 +56,11 @@ io.on('connection', socket => {
 	});
 });
 
-const PORT = 9002; // Cambia el número de puerto si es necesario
-server.listen(PORT, () => {
-	console.log(`Servidor WebSocket escuchando en http://localhost:${PORT}`);
+const port = procces.env.port || 9002; // Cambia el número de puerto si es necesario
+server.listen(port, () => {
+	console.log(`Servidor WebSocket escuchando en http://localhost:${port}`);
 });
-app.get('/hol', (reà, res) => {
+app.get('/hol', (req, res) => {
 	console.log('holllll');
 	res.send('<h1>hola</h1>');
 });
